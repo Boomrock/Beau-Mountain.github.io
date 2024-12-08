@@ -1,0 +1,137 @@
+@import 'global-variables';
+@import 'global-styles';
+@import 'text-variables';
+
+$hours-card-padding: 1.5rem  3rem;
+
+.content-section{
+    margin: 10rem $global-margin 0;
+    
+    .time-section{
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .today-in-mountain{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 27rem;
+
+        .title{
+            font-size: calc($title-font-size + 0.5rem);
+        }
+
+        .condition{ 
+            @extend .sub-title;
+            display: flex;
+            gap: 2rem;
+
+
+            #text-condition{
+                color: rgba(255, 255, 255, 0.60)
+            }
+            .weather-today{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                font-size: calc($sub-title-font-size + 0.3rem);
+            }
+        }
+    }
+    .openning-hours-card {
+
+        background-color: $opacity-black;
+        border-radius: 0.75rem;
+        backdrop-filter: blur(16px);
+        overflow: hidden;
+        .cards-title {
+            background-color: $neutral-dark-blue;
+            padding: $hours-card-padding;
+        }
+    
+        .hours-works {
+            padding: $hours-card-padding;
+            #open-today-text{
+                color: rgba(255, 255, 255, 0.70)
+            }
+            .hours-opened {
+                font-size: calc($title-font-size - 1rem);
+                margin-top: 1rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+                padding-bottom: 2rem;
+            }
+        }
+    
+        .cards-footer {
+            padding: $hours-card-padding;
+            .text{
+                color: $primary-color;
+            }
+           
+        }
+        .cards-footer:hover{
+            transform: scale(1.01);
+        }
+    }
+
+    .weather-section {
+        margin-top: 10rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      .weather {
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        width: 30rem;
+        .weather-header-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            .circle-day {
+                background-color: $primary-green;
+                color: black;
+                border-radius: 50%;
+                padding: 1rem;
+            }
+        }
+      
+        .weather-by-day {
+            display: flex;
+            .weather-day {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                transition: transform 0.3s;
+                .brief{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    .sub-title{
+                        font-size: calc($sub-title-font-size + 1rem);
+                    }
+                }
+            }
+            .weather-day:hover {
+                transform: scale(1.2); /* Увеличение на 20% */
+            }
+        }
+      
+        .note {
+            width: 100%;
+            font-size: small;
+        }
+      }
+      .route-map{
+        img{
+            width: 40rem;
+            height: 40rem;
+            object-fit: contain;
+        }
+      }
+    }
+}        

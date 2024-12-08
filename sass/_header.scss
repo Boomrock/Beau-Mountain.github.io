@@ -1,0 +1,41 @@
+@import 'global-variables';
+// Объявление переменных
+$header-height: 50px;
+$header-width: calc(100% - 60px);
+$header-border-color: white;
+$header-padding: 0px 30px;
+$menu-gap: 4vw;
+$selected-item-border: 5px solid white;
+$backdrop-blur: blur(1px);
+
+header {
+    @extend .text;
+    height: $header-height;
+    width: $header-width;
+    border-bottom: 1px solid $header-border-color;
+    display: flex;
+    justify-content: space-between;
+    padding: $header-padding;
+    align-items: center;
+    color: $neutral-white;
+    backdrop-filter: $backdrop-blur;
+
+    .menu {
+        display: flex;
+        height: 100%;
+        gap: $menu-gap;
+        align-items: center;
+
+        .item {
+            align-content: center;
+            height: 100%;
+        }
+
+        #selected-item {
+            position: relative;
+            height: calc(100% - 5px);
+            top:2px;
+            border-bottom: $selected-item-border;
+        }
+    }
+}

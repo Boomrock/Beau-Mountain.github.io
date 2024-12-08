@@ -1,0 +1,64 @@
+// Объявление переменных
+@import 'text-variables';
+
+$first-line-font-size: 4vw;
+$second-line-font-size: 9vw;
+$title-line-height: 4vw;
+$second-line-line-height: 100%;
+$z-index-background: -1;
+
+$top-position-title: 12vw;
+$top-position-mountain: 10%;
+
+.landscape-background {
+    position: absolute;
+    z-index: $z-index-background;
+    top: 0;
+    left: 0;
+
+    width: 100%; // Ширина контейнера
+    height: 100%; // Высота контейнера
+
+    .title {
+        position: relative;
+        display: flex;
+        top: $top-position-title;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+        #first-line {
+            color: var(--Neutral-White, $neutral-white);
+            font-family: $title-font-family;
+            font-size: $first-line-font-size;
+            font-style: normal;
+            font-weight: 700;
+            line-height: $title-line-height; /* 114.286% */
+        }
+
+        #second-line {
+            color: var(--Neutral-White, $neutral-white);
+            font-family: $title-font-family;
+            font-size: $second-line-font-size;
+            font-style: normal;
+            font-weight: 900;
+            line-height: $second-line-line-height; /* 9.75rem */
+            text-transform: uppercase;
+        }
+    }
+
+    .sky {
+        z-index: $z-index-background;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .mountain {
+        position: absolute;
+        top: $top-position-mountain;
+        left: 0;
+        width: 100%;
+    }
+}
