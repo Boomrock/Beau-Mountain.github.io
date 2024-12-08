@@ -114,7 +114,7 @@
 .blog-card {
   width: 33rem;
   height: 15.1875rem;
-  background-image: url("../source/blog.png");
+  background-image: url("../source/Blog.png");
   background-repeat: no-repeat;
   background-position: bottom; /* устанавливаем изображение внизу */
   -webkit-backdrop-filter: blur(10px);
